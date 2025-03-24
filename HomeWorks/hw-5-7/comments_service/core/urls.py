@@ -18,4 +18,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('core.urls')),
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+    # path('register/', RegisterUserView.as_view(), name='register'),
+    # path('login/', ObtainTokenView.as_view(), name='login'),
 ]
