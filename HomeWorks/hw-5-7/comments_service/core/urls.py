@@ -8,7 +8,7 @@ schema_view = get_schema_view(
     openapi.Info(
         title="CommentsService API",
         default_version='v1',
-        description="API для работы с комментариями и лайками",
+        description="API для работы с приложением",
     ),
     public=True,
     permission_classes=[permissions.AllowAny],
@@ -16,6 +16,6 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('comments.urls')),
+    path('api/', include('core.urls')),
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
 ]
